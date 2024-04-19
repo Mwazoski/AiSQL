@@ -4,15 +4,15 @@ services:
     container_name: laravel-docker
     build: .
     volumes:
-      - ./newApp:/var/www/html
+      - ./src:/var/www/html
     ports:
       - 8000:80
     environment:
       - DB_CONNECTION=mysql
       - DB_HOST=mysql
       - DB_PORT=3306
-      - DB_DATABASE=TfgTester
-      - DB_USERNAME=user
+      - DB_DATABASE=aisql
+      - DB_USERNAME=root
       - DB_PASSWORD=
   
   mysql:
